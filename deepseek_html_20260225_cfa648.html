@@ -1,0 +1,680 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lorna Moffat - Business Consultant</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+        }
+
+        /* Navigation */
+        .navbar {
+            background-color: white;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            padding: 15px 0;
+        }
+
+        .navbar-brand {
+            color: #1a5276;
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        .nav-link {
+            color: #333;
+            margin: 0 10px;
+        }
+
+        .nav-link:hover {
+            color: #1a5276;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://images.unsplash.com/photo-1497366754035-f200968a6e72?w=1600');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            text-align: center;
+            padding: 150px 0 100px;
+            margin-top: 76px;
+        }
+
+        .profile-img {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            margin: 0 auto 30px;
+            border: 5px solid #fff;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+        }
+
+        .profile-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .hero h1 {
+            font-size: 48px;
+            margin-bottom: 20px;
+        }
+
+        .hero h3 {
+            font-size: 24px;
+            margin-bottom: 30px;
+            font-weight: normal;
+        }
+
+        .hero p {
+            font-size: 18px;
+            max-width: 800px;
+            margin: 0 auto 40px;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 12px 30px;
+            background-color: #1a5276;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            font-size: 18px;
+            border: none;
+            cursor: pointer;
+        }
+
+        .btn:hover {
+            background-color: #154360;
+        }
+
+        /* Services Section */
+        .services {
+            padding: 80px 0;
+            background-color: #f9f9f9;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .section-title h2 {
+            font-size: 36px;
+            color: #1a5276;
+            margin-bottom: 15px;
+        }
+
+        .section-title p {
+            font-size: 18px;
+            color: #666;
+        }
+
+        .service-card {
+            background: white;
+            padding: 30px;
+            border-radius: 5px;
+            text-align: center;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            margin-bottom: 30px;
+            height: 100%;
+            transition: transform 0.3s;
+        }
+
+        .service-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .service-card i {
+            font-size: 48px;
+            color: #1a5276;
+            margin-bottom: 20px;
+        }
+
+        .service-card h4 {
+            margin-bottom: 15px;
+            color: #333;
+        }
+
+        /* About Section */
+        .about {
+            padding: 80px 0;
+        }
+
+.about-img {
+    width: 100%;
+    height: 500px;  /* Fixed height for consistency */
+    border-radius: 10px;
+    overflow: hidden;  /* Prevents image from overflowing */
+    box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+}
+
+.about-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;  /* Ensures image covers the area without distortion */
+    object-position: center;  /* Centers the image */
+    transition: transform 0.5s ease;  /* Smooth hover effect */
+}
+
+.about-img:hover img {
+    transform: scale(1.05);  /* Slight zoom on hover */
+}
+
+        .about-content {
+            padding-left: 30px;
+        }
+
+        .about-content h2 {
+            color: #1a5276;
+            margin-bottom: 30px;
+        }
+
+        .about-content p {
+            margin-bottom: 20px;
+        }
+
+        /* Why Me Section */
+        .why-me {
+            padding: 80px 0;
+            background-color: #1a5276;
+            color: white;
+        }
+
+        .why-me .section-title h2 {
+            color: white;
+        }
+
+        .value-item {
+            text-align: center;
+            margin-bottom: 30px;
+            padding: 20px;
+        }
+
+        .value-item i {
+            font-size: 48px;
+            color: #f39c12;
+            margin-bottom: 20px;
+        }
+
+        .value-item h4 {
+            margin-bottom: 15px;
+        }
+
+        /* Quote Section */
+        .quote {
+            padding: 80px 0;
+            background: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.8)), url('https://images.unsplash.com/photo-1557804506-669a67965ba0?w=1600');
+            background-size: cover;
+            background-attachment: fixed;
+            color: white;
+            text-align: center;
+        }
+
+        .quote p {
+            font-size: 28px;
+            font-style: italic;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .quote-author {
+            margin-top: 30px;
+            font-size: 20px;
+            color: #f39c12;
+        }
+
+        /* Testimonials */
+        .testimonials {
+            padding: 80px 0;
+            background-color: #f9f9f9;
+        }
+
+        .testimonial-card {
+            background: white;
+            padding: 30px;
+            border-radius: 5px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            margin-bottom: 30px;
+            position: relative;
+        }
+
+        .testimonial-card:before {
+            content: '"';
+            font-size: 60px;
+            color: #1a5276;
+            opacity: 0.2;
+            position: absolute;
+            top: 10px;
+            left: 20px;
+        }
+
+        .testimonial-card p {
+            font-style: italic;
+            margin-bottom: 20px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .client {
+            color: #1a5276;
+            font-weight: bold;
+        }
+
+        /* Contact Section */
+        .contact {
+            padding: 80px 0;
+        }
+
+        .contact-info {
+            background: #f9f9f9;
+            padding: 40px;
+            border-radius: 5px;
+            height: 100%;
+        }
+
+        .contact-info p {
+            margin-bottom: 25px;
+            font-size: 18px;
+        }
+
+        .contact-info i {
+            color: #1a5276;
+            width: 30px;
+            margin-right: 10px;
+        }
+
+        .contact-form {
+            padding: 40px;
+            background: white;
+            border-radius: 5px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+        }
+
+        .form-control {
+            width: 100%;
+            padding: 12px;
+            margin-bottom: 20px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+
+        .form-control:focus {
+            outline: none;
+            border-color: #1a5276;
+        }
+
+        /* Footer */
+        .footer {
+            background-color: #2c3e50;
+            color: white;
+            text-align: center;
+            padding: 40px 0;
+        }
+
+        .social-links a {
+            color: white;
+            margin: 0 10px;
+            font-size: 20px;
+            text-decoration: none;
+            display: inline-block;
+            transition: transform 0.3s;
+        }
+
+        .social-links a:hover {
+            color: #f39c12;
+            transform: translateY(-3px);
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 36px;
+            }
+            
+            .hero h3 {
+                font-size: 20px;
+            }
+            
+            .about-content {
+                padding-left: 0;
+                margin-top: 30px;
+            }
+            
+            .profile-img {
+                width: 150px;
+                height: 150px;
+            }
+            
+            .contact-info {
+                margin-bottom: 30px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="#">Lorna Moffat</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#home">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#services">Services</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#about">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#why-me">Why Me</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section with Your Photo -->
+    <section id="home" class="hero">
+        <div class="container">
+            <div class="profile-img">
+                <!-- Your photo inserted here -->
+                <img src="Lorna-Moffat-Pic.jpg" alt="Lorna Moffat">
+            </div>
+            <h1>Lorna Moffat</h1>
+            <h3>Project Management & Business Development Consultant</h3>
+            <p>I partner with businesses, organizations, and entrepreneurs to provide tailored solutions that drive growth, efficiency, and success.</p>
+            <a href="#contact" class="btn">Get In Touch</a>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="services">
+        <div class="container">
+            <div class="section-title">
+                <h2>What I Do</h2>
+                <p>With hands-on experience in leading complex projects and business transformation, I bring clarity, momentum, and results.</p>
+            </div>
+            
+            <div class="row">
+                <div class="col-md-6 col-lg-4">
+                    <div class="service-card">
+                        <i class="fas fa-project-diagram"></i>
+                        <h4>Project Planning & Execution</h4>
+                        <p>End-to-end project management from conception to completion, ensuring timely delivery and quality results.</p>
+                    </div>
+                </div>
+                
+                <div class="col-md-6 col-lg-4">
+                    <div class="service-card">
+                        <i class="fas fa-chart-line"></i>
+                        <h4>Business Strategy & Development</h4>
+                        <p>Strategic planning and business development to drive growth and competitive advantage.</p>
+                    </div>
+                </div>
+                
+                <div class="col-md-6 col-lg-4">
+                    <div class="service-card">
+                        <i class="fas fa-cogs"></i>
+                        <h4>Process Improvement & Optimization</h4>
+                        <p>Streamlining operations and implementing efficient processes to maximize productivity.</p>
+                    </div>
+                </div>
+                
+                <div class="col-md-6 col-lg-4">
+                    <div class="service-card">
+                        <i class="fas fa-users"></i>
+                        <h4>Team Building & Leadership Coaching</h4>
+                        <p>Developing high-performing teams and coaching leaders to achieve their full potential.</p>
+                    </div>
+                </div>
+                
+                <div class="col-md-6 col-lg-4">
+                    <div class="service-card">
+                        <i class="fas fa-exchange-alt"></i>
+                        <h4>Change Management</h4>
+                        <p>Guiding organizations through transformational changes with minimal disruption.</p>
+                    </div>
+                </div>
+                
+                <div class="col-md-6 col-lg-4">
+                    <div class="service-card">
+                        <i class="fas fa-shield-alt"></i>
+                        <h4>Risk Assessment & Mitigation</h4>
+                        <p>Identifying potential risks and developing strategies to minimize their impact.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section with Your Photo -->
+    <section id="about" class="about">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6">
+                    <div class="about-img">
+                        <!-- Your photo inserted here -->
+                        <img src="About-section.jpg" alt="Lorna Moffat">
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="about-content">
+                        <h2>About Me</h2>
+                        <p>I am a dedicated business consultant with over 10 years of experience in project management and business development. My passion lies in helping businesses achieve sustainable growth through strategic planning and effective execution.</p>
+                        <p>I believe that "Strategy without execution is just a dream." This philosophy drives my approach to consulting, where I focus on turning plans into measurable progress and tangible results for my clients.</p>
+                        <p>My hands-on approach ensures that I understand the unique challenges each business faces, allowing me to provide customized solutions that address specific needs and drive meaningful change.</p>
+                        
+                        <div class="row mt-4">
+                            <div class="col-6">
+                                <h3 style="color: #1a5276;">10+</h3>
+                                <p style="font-size: 16px;">Years Experience</p>
+                            </div>
+                            <div class="col-6">
+                                <h3 style="color: #1a5276;">50+</h3>
+                                <p style="font-size: 16px;">Projects Completed</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Work With Me Section -->
+    <section id="why-me" class="why-me">
+        <div class="container">
+            <div class="section-title">
+                <h2>Why Work With Me</h2>
+            </div>
+            
+            <div class="row">
+                <div class="col-md-6 col-lg-4">
+                    <div class="value-item">
+                        <i class="fas fa-award"></i>
+                        <h4>Proven Experience</h4>
+                        <p>Over 10 years of demonstrated success in project management and business consulting.</p>
+                    </div>
+                </div>
+                
+                <div class="col-md-6 col-lg-4">
+                    <div class="value-item">
+                        <i class="fas fa-bullseye"></i>
+                        <h4>Results-Driven</h4>
+                        <p>Hands-on approach focused on delivering measurable results and tangible outcomes.</p>
+                    </div>
+                </div>
+                
+                <div class="col-md-6 col-lg-4">
+                    <div class="value-item">
+                        <i class="fas fa-seedling"></i>
+                        <h4>Sustainable Growth</h4>
+                        <p>Passionate about implementing strategies that ensure long-term growth.</p>
+                    </div>
+                </div>
+                
+                <div class="col-md-6 col-lg-4">
+                    <div class="value-item">
+                        <i class="fas fa-pencil-ruler"></i>
+                        <h4>Customized Solutions</h4>
+                        <p>Tailored approaches for each client's unique challenges and goals.</p>
+                    </div>
+                </div>
+                
+                <div class="col-md-6 col-lg-4">
+                    <div class="value-item">
+                        <i class="fas fa-comments"></i>
+                        <h4>Strong Communication</h4>
+                        <p>Clear understanding and seamless collaboration throughout the process.</p>
+                    </div>
+                </div>
+                
+                <div class="col-md-6 col-lg-4">
+                    <div class="value-item">
+                        <i class="fas fa-lightbulb"></i>
+                        <h4>Leadership Expertise</h4>
+                        <p>Proven leadership to guide teams through complex challenges.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Quote Section -->
+    <section class="quote">
+        <div class="container">
+            <p>"Strategy without execution is just a dream. I help you turn your plans into measurable progress."</p>
+            <div class="quote-author">— Lorna Moffat</div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="testimonials">
+        <div class="container">
+            <div class="section-title">
+                <h2>Client Testimonials</h2>
+            </div>
+            
+            <div class="row">
+                <div class="col-lg-8 mx-auto">
+                    <div class="testimonial-card">
+                        <p>"Lorna's expertise in project management was instrumental in helping our organization navigate a complex restructuring process. Her hands-on approach and strategic insights delivered results that exceeded our expectations."</p>
+                        <div class="client">- CEO, Manufacturing Company</div>
+                    </div>
+                    
+                    <div class="testimonial-card">
+                        <p>"Working with Lorna transformed our business operations. Her process optimization strategies helped us reduce costs by 22% while improving overall efficiency. She's more than a consultant - she's a strategic partner."</p>
+                        <div class="client">- Director, Tech Startup</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <div class="section-title">
+                <h2>Contact Me</h2>
+                <p>Let's work together to move your business forward!</p>
+            </div>
+            
+            <div class="row">
+                <div class="col-lg-4">
+                    <div class="contact-info">
+                        <p><i class="fas fa-envelope"></i> lornamoffat3@gmail.com</p>
+                        <p><i class="fas fa-phone"></i> +263 712 042 225</p>
+                        <p><i class="fas fa-map-marker-alt"></i> Harare, Zimbabwe</p>
+                        <hr>
+                        <p><i class="fas fa-quote-left"></i> Strategy without execution is just a dream. I help you turn your plans into measurable progress.</p>
+                    </div>
+                </div>
+                
+                <div class="col-lg-8">
+                    <div class="contact-form">
+                        <form id="contactForm">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <input type="text" class="form-control" placeholder="Your Name" required>
+                                </div>
+                                <div class="col-md-6">
+                                    <input type="email" class="form-control" placeholder="Your Email" required>
+                                </div>
+                            </div>
+                            <input type="text" class="form-control" placeholder="Subject" required>
+                            <textarea class="form-control" rows="5" placeholder="Your Message" required></textarea>
+                            <button type="submit" class="btn">Send Message</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="social-links mb-3">
+                <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+            </div>
+            <p>&copy; 2024 Lorna Moffat. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <script>
+        // Smooth scrolling
+        document.querySelectorAll('a.nav-link').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('href');
+                if (targetId.startsWith('#')) {
+                    const targetElement = document.querySelector(targetId);
+                    if (targetElement) {
+                        window.scrollTo({
+                            top: targetElement.offsetTop - 76,
+                            behavior: 'smooth'
+                        });
+                    }
+                }
+            });
+        });
+
+        // Contact form
+        document.getElementById('contactForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('Thank you for your message! Lorna will get back to you within 24 hours.');
+            this.reset();
+        });
+    </script>
+</body>
+</html>
