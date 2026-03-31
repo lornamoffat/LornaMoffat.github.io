@@ -619,14 +619,14 @@
                         <form id="contactForm">
                             <div class="row">
                                 <div class="col-md-6">
-                                    <input type="text" class="form-control" placeholder="Your Name" required>
+                                  <input type="text" name="name" class="form-control" placeholder="Your Name" required>
                                 </div>
                                 <div class="col-md-6">
-                                    <input type="email" class="form-control" placeholder="Your Email" required>
+                                  <input type="email" name="email" class="form-control" placeholder="Your Email" required>
                                 </div>
                             </div>
-                            <input type="text" class="form-control" placeholder="Subject" required>
-                            <textarea class="form-control" rows="5" placeholder="Your Message" required></textarea>
+                           <input type="text" name="subject" class="form-control" placeholder="Subject" required>
+                           <textarea name="message" class="form-control" rows="5" placeholder="Your Message" required></textarea>
                             <button type="submit" class="btn">Send Message</button>
                         </form>
                     </div>
@@ -670,11 +670,30 @@
         });
 
         // Contact form
-        document.getElementById('contactForm').addEventListener('submit', function(e) {
-            e.preventDefault();
-            alert('Thank you for your message! Lorna will get back to you within 24 hours.');
-            this.reset();
-        });
+       (function(){
+    emailjs.init("YOUR_PUBLIC_KEY");
+})();
+
+document.getElementById('contactForm').addEventListener('submit', function(e) {
+    e.preventDefault();
+
+    emailjs.sendForm('YOUR_SERVICE_ID', 'YOUR_TEMPLATE_ID', this)
+    .then(function() {
+        alert('Message sent successfully!');
+    }, function(error) {
+        alert('Failed to send message. Please try again.');
+        console.error(error);
+    });
+
+    this.reset();
     </script>
+    <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+
+    <script>
+(function(){
+    emailjs.init("YOUR_PUBLIC_KEY");
+})();
+</script>
+    
 </body>
 </html>
