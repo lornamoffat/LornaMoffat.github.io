@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://LornaMoffat.github.io/sitemap.xml
+Sitemap: https://lornamoffat.github.io/sitemap.xml
