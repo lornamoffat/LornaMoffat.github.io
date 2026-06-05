@@ -3,58 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- SEO Meta Tags -->
-<meta name="description" content="Lorna Moffat is a PMP-certified business consultant and project management trainer offering professional training, consulting, and business solutions in Zimbabwe and beyond.">
-
-<meta name="keywords" content="Lorna Moffat, PMP, Project Management Professional, project management trainer, PMP training, business consultant, project management consultant, corporate training, leadership training, Zimbabwe, Harare, PM training">
-
-<meta name="author" content="Lorna Moffat">
-
-<meta name="robots" content="index, follow">
-
-<!-- Open Graph for Social Media -->
-<meta property="og:title" content="Lorna Moffat | PMP Business Consultant & Project Management Trainer">
-<meta property="og:description" content="Professional PMP-certified business consultant and project management trainer.">
-<meta property="og:type" content="website">
-<meta property="og:url" content="https://yourwebsite.com">
-<meta property="og:image" content="https://yourwebsite.com/images/lorna-moffat.jpg">
-
-<!-- Canonical URL -->
-<link rel="canonical" href="https://yourwebsite.com">
-
-<!-- Structured Data for Google -->
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "Person",
-  "name": "Lorna Moffat",
-  "jobTitle": "PMP Certified Business Consultant",
-  "description": "Project management trainer and business consultant specializing in PMP training and corporate consulting.",
-  "url": "https://yourwebsite.com",
-  "sameAs": [
-    "https://www.linkedin.com/in/yourprofile",
-    "https://www.facebook.com/yourprofile"
-  ],
-  "knowsAbout": [
-    "Project Management",
-    "PMP Training",
-    "Business Consulting",
-    "Leadership Training",
-    "Corporate Training"
-  ],
-  "address": {
-    "@type": "PostalAddress",
-    "addressLocality": "Harare",
-    "addressCountry": "Zimbabwe"
-  }
-}
-</script>
-    
-    <title>Lorna Moffat - Business Consultant</title>
+    <title>Lorna Moffat - Project Management & Business Development Consultant</title>
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <style>
         * {
             margin: 0;
@@ -63,361 +18,519 @@
         }
 
         body {
-            font-family: Arial, sans-serif;
+            font-family: 'Poppins', sans-serif;
+            color: #2c3e50;
             line-height: 1.6;
-            color: #333;
+            background-color: #0a0a2a;
         }
 
         /* Navigation */
         .navbar {
-            background-color: white;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            background-color: rgba(10, 10, 42, 0.95);
+            backdrop-filter: blur(10px);
+            box-shadow: 0 2px 20px rgba(0,0,0,0.2);
             padding: 15px 0;
         }
 
         .navbar-brand {
-            color: #1a5276;
+            color: #f39c12;
             font-size: 24px;
-            font-weight: bold;
+            font-weight: 700;
+            letter-spacing: -0.5px;
         }
 
         .nav-link {
-            color: #333;
-            margin: 0 10px;
+            color: #ffffff;
+            font-weight: 500;
+            margin: 0 12px;
+            transition: color 0.3s;
         }
 
         .nav-link:hover {
-            color: #1a5276;
+            color: #f39c12;
         }
 
-        /* Hero Section */
-        .hero {
-            background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://images.unsplash.com/photo-1497366754035-f200968a6e72?w=1600');
+        /* Hero Section - Rich Professional Background */
+        .hero-section {
+            position: relative;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            background: linear-gradient(135deg, rgba(10, 10, 42, 0.85) 0%, rgba(26, 82, 118, 0.9) 100%), url('https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?ixlib=rb-4.0.3&auto=format&fit=crop&w=1500&q=80');
             background-size: cover;
             background-position: center;
+            background-attachment: fixed;
             color: white;
-            text-align: center;
-            padding: 150px 0 100px;
+            padding: 180px 0 120px;
             margin-top: 76px;
         }
 
-        .profile-img {
+        .hero-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" opacity="0.08"><path d="M10 50 L90 50 M50 10 L50 90 M30 30 L70 70 M30 70 L70 30" stroke="white" stroke-width="1"/><circle cx="50" cy="50" r="30" fill="none" stroke="white" stroke-width="1"/><circle cx="20" cy="20" r="5" fill="white"/><circle cx="80" cy="20" r="5" fill="white"/><circle cx="20" cy="80" r="5" fill="white"/><circle cx="80" cy="80" r="5" fill="white"/></svg>');
+            background-size: 80px 80px;
+            pointer-events: none;
+        }
+
+        .profile-img-container {
             width: 200px;
             height: 200px;
             border-radius: 50%;
             margin: 0 auto 30px;
-            border: 5px solid #fff;
+            border: 4px solid rgba(243, 156, 18, 0.5);
             overflow: hidden;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+            position: relative;
+            z-index: 2;
         }
 
-        .profile-img img {
+        .profile-img-container img {
             width: 100%;
             height: 100%;
             object-fit: cover;
         }
 
-        .hero h1 {
-            font-size: 48px;
-            margin-bottom: 20px;
+        .hero-title {
+            font-size: 52px;
+            font-weight: 800;
+            margin-bottom: 10px;
+            position: relative;
+            z-index: 2;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
         }
 
-        .hero h3 {
+        .hero-subtitle {
             font-size: 24px;
-            margin-bottom: 30px;
-            font-weight: normal;
+            font-weight: 500;
+            margin-bottom: 20px;
+            opacity: 0.95;
+            position: relative;
+            z-index: 2;
         }
 
-        .hero p {
-            font-size: 18px;
-            max-width: 800px;
-            margin: 0 auto 40px;
+        .hero-badges {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            flex-wrap: wrap;
+            margin: 30px 0;
+            position: relative;
+            z-index: 2;
         }
 
-        .btn {
-            display: inline-block;
-            padding: 12px 30px;
-            background-color: #1a5276;
+        .badge-custom {
+            background: rgba(243, 156, 18, 0.2);
+            border: 1px solid rgba(243, 156, 18, 0.5);
+            padding: 10px 25px;
+            border-radius: 50px;
+            font-size: 14px;
+            font-weight: 500;
+            backdrop-filter: blur(5px);
+        }
+
+        .btn-primary {
+            background: linear-gradient(135deg, #f39c12, #e67e22);
             color: white;
-            text-decoration: none;
-            border-radius: 5px;
-            font-size: 18px;
+            padding: 14px 45px;
+            border-radius: 50px;
+            font-weight: 600;
             border: none;
-            cursor: pointer;
+            transition: all 0.3s;
+            text-decoration: none;
+            display: inline-block;
+            position: relative;
+            z-index: 2;
+            box-shadow: 0 5px 15px rgba(243, 156, 18, 0.3);
         }
 
-        .btn:hover {
-            background-color: #154360;
+        .btn-primary:hover {
+            background: linear-gradient(135deg, #e67e22, #d35400);
+            transform: translateY(-3px);
+            box-shadow: 0 8px 25px rgba(243, 156, 18, 0.4);
+            color: white;
+        }
+
+        /* Section Titles */
+        .section-title {
+            color: #1a5276;
+            font-size: 36px;
+            font-weight: 700;
+            margin-bottom: 40px;
+            position: relative;
+            padding-bottom: 15px;
+        }
+
+        .section-title:after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 80px;
+            height: 4px;
+            background: linear-gradient(90deg, #f39c12, #e67e22);
+            border-radius: 2px;
+        }
+
+        .section-title.text-center:after {
+            left: 50%;
+            transform: translateX(-50%);
         }
 
         /* Services Section */
-        .services {
-            padding: 80px 0;
-            background-color: #f9f9f9;
-        }
-
-        .section-title {
-            text-align: center;
-            margin-bottom: 50px;
-        }
-
-        .section-title h2 {
-            font-size: 36px;
-            color: #1a5276;
-            margin-bottom: 15px;
-        }
-
-        .section-title p {
-            font-size: 18px;
-            color: #666;
+        .services-section {
+            padding: 100px 0;
+            background: #ffffff;
         }
 
         .service-card {
-            background: white;
-            padding: 30px;
-            border-radius: 5px;
+            background: #ffffff;
+            padding: 40px 30px;
+            border-radius: 15px;
             text-align: center;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-            margin-bottom: 30px;
             height: 100%;
-            transition: transform 0.3s;
+            transition: all 0.3s;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+            border: 1px solid rgba(0,0,0,0.05);
         }
 
         .service-card:hover {
-            transform: translateY(-5px);
+            transform: translateY(-10px);
+            box-shadow: 0 25px 40px rgba(26, 82, 118, 0.15);
+            border-color: #f39c12;
         }
 
-        .service-card i {
-            font-size: 48px;
-            color: #1a5276;
+        .service-icon {
+            font-size: 50px;
+            color: #f39c12;
             margin-bottom: 20px;
         }
 
         .service-card h4 {
+            font-size: 20px;
+            font-weight: 600;
             margin-bottom: 15px;
-            color: #333;
+            color: #1a5276;
+        }
+
+        .service-card p {
+            color: #666;
+            font-size: 14px;
         }
 
         /* About Section */
-        .about {
-            padding: 80px 0;
+        .about-section {
+            padding: 100px 0;
+            background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
         }
 
-.about-img {
-    width: 100%;
-    height: 500px;  /* Fixed height for consistency */
-    border-radius: 10px;
-    overflow: hidden;  /* Prevents image from overflowing */
-    box-shadow: 0 10px 30px rgba(0,0,0,0.15);
-}
-
-.about-img img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;  /* Ensures image covers the area without distortion */
-    object-position: center;  /* Centers the image */
-    transition: transform 0.5s ease;  /* Smooth hover effect */
-}
-
-.about-img:hover img {
-    transform: scale(1.05);  /* Slight zoom on hover */
-}
-
-        .about-content {
-            padding-left: 30px;
+        .about-img {
+            width: 100%;
+            height: 500px;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+            border: 3px solid #f39c12;
         }
 
-        .about-content h2 {
-            color: #1a5276;
-            margin-bottom: 30px;
+        .about-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
         }
 
-        .about-content p {
+        .about-stats {
+            display: flex;
+            gap: 20px;
+            margin-top: 30px;
+            flex-wrap: wrap;
+        }
+
+        .stat-box {
+            background: white;
+            padding: 25px;
+            border-radius: 12px;
+            text-align: center;
+            flex: 1;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+            transition: all 0.3s;
+            border-bottom: 3px solid #f39c12;
+        }
+
+        .stat-box:hover {
+            background: #1a5276;
+            color: white;
+            transform: translateY(-5px);
+        }
+
+        .stat-box h3 {
+            color: #f39c12;
+            font-size: 36px;
+            font-weight: 700;
+            margin-bottom: 5px;
+        }
+
+        .stat-box:hover h3 {
+            color: white;
+        }
+
+        /* Why Work With Me Section - Rich Background */
+        .why-me-section {
+            padding: 100px 0;
+            background: linear-gradient(135deg, #0a0a2a 0%, #1a5276 50%, #0a0a2a 100%);
+            color: white;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .why-me-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" opacity="0.05"><path d="M10 50 L90 50 M50 10 L50 90" stroke="white" stroke-width="1"/><circle cx="50" cy="50" r="40" fill="none" stroke="white" stroke-width="1"/></svg>');
+            background-size: 60px 60px;
+            pointer-events: none;
+        }
+
+        .why-me-section .section-title {
+            color: white;
+        }
+
+        .value-card {
+            background: rgba(255, 255, 255, 0.08);
+            backdrop-filter: blur(10px);
+            padding: 35px;
+            border-radius: 15px;
+            text-align: center;
+            height: 100%;
+            transition: all 0.3s;
+            border: 1px solid rgba(243, 156, 18, 0.3);
+        }
+
+        .value-card:hover {
+            background: rgba(243, 156, 18, 0.15);
+            transform: translateY(-10px);
+            border-color: #f39c12;
+        }
+
+        .value-icon {
+            font-size: 50px;
+            color: #f39c12;
             margin-bottom: 20px;
         }
 
-        /* Why Me Section */
-        .why-me {
-            padding: 80px 0;
-            background-color: #1a5276;
-            color: white;
+        .value-card h4 {
+            font-size: 20px;
+            font-weight: 600;
+            margin-bottom: 15px;
         }
 
-        .why-me .section-title h2 {
-            color: white;
+        /* Awards Section */
+        .awards-section {
+            padding: 100px 0;
+            background: #ffffff;
         }
 
-        .value-item {
+        .awards-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 30px;
+        }
+
+        .award-card {
+            background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%);
+            padding: 35px 25px;
+            border-radius: 15px;
             text-align: center;
-            margin-bottom: 30px;
-            padding: 20px;
+            transition: all 0.3s;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+            border-bottom: 4px solid #f39c12;
         }
 
-        .value-item i {
+        .award-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 25px 40px rgba(26, 82, 118, 0.2);
+            background: linear-gradient(135deg, #1a5276 0%, #2980b9 100%);
+            color: white;
+        }
+
+        .award-card:hover .award-icon {
+            color: #f39c12;
+        }
+
+        .award-card:hover p {
+            color: rgba(255,255,255,0.9);
+        }
+
+        .award-icon {
             font-size: 48px;
             color: #f39c12;
             margin-bottom: 20px;
         }
 
-        .value-item h4 {
-            margin-bottom: 15px;
+        .award-card h4 {
+            font-size: 18px;
+            font-weight: 700;
+            margin-bottom: 10px;
         }
 
-        /* Quote Section */
-        .quote {
-            padding: 80px 0;
-            background: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.8)), url('https://images.unsplash.com/photo-1557804506-669a67965ba0?w=1600');
-            background-size: cover;
-            background-attachment: fixed;
+        .award-card p {
+            font-size: 14px;
+            color: #666;
+            margin-bottom: 0;
+        }
+
+        /* Quote Section - Rich Background */
+        .quote-section {
+            padding: 100px 0;
+            background: linear-gradient(135deg, #f39c12 0%, #e67e22 50%, #d35400 100%);
             color: white;
             text-align: center;
+            position: relative;
+            overflow: hidden;
         }
 
-        .quote p {
-            font-size: 28px;
+        .quote-section::before {
+            content: '"';
+            font-size: 200px;
+            position: absolute;
+            top: -50px;
+            left: 20px;
+            opacity: 0.1;
+            font-family: serif;
+        }
+
+        .quote-section::after {
+            content: '"';
+            font-size: 200px;
+            position: absolute;
+            bottom: -80px;
+            right: 20px;
+            opacity: 0.1;
+            font-family: serif;
+        }
+
+        .quote-text {
+            font-size: 32px;
             font-style: italic;
             max-width: 900px;
             margin: 0 auto;
+            line-height: 1.6;
+            position: relative;
+            z-index: 2;
         }
 
         .quote-author {
             margin-top: 30px;
-            font-size: 20px;
-            color: #f39c12;
-        }
-
-        /* Testimonials */
-        .testimonials {
-            padding: 80px 0;
-            background-color: #f9f9f9;
-        }
-
-        .testimonial-card {
-            background: white;
-            padding: 30px;
-            border-radius: 5px;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-            margin-bottom: 30px;
-            position: relative;
-        }
-
-        .testimonial-card:before {
-            content: '"';
-            font-size: 60px;
-            color: #1a5276;
-            opacity: 0.2;
-            position: absolute;
-            top: 10px;
-            left: 20px;
-        }
-
-        .testimonial-card p {
-            font-style: italic;
-            margin-bottom: 20px;
-            position: relative;
-            z-index: 1;
-        }
-
-        .client {
-            color: #1a5276;
-            font-weight: bold;
+            font-size: 22px;
+            font-weight: 600;
+            opacity: 0.95;
         }
 
         /* Contact Section */
-        .contact {
-            padding: 80px 0;
+        .contact-section {
+            padding: 100px 0;
+            background: linear-gradient(135deg, #1a5276 0%, #0a0a2a 100%);
+        }
+
+        .contact-section .section-title {
+            color: white;
         }
 
         .contact-info {
-            background: #f9f9f9;
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
             padding: 40px;
-            border-radius: 5px;
+            border-radius: 15px;
             height: 100%;
-        }
-
-        .contact-info p {
-            margin-bottom: 25px;
-            font-size: 18px;
+            border: 1px solid rgba(255,255,255,0.2);
+            color: white;
         }
 
         .contact-info i {
-            color: #1a5276;
+            color: #f39c12;
             width: 30px;
             margin-right: 10px;
         }
 
         .contact-form {
-            padding: 40px;
             background: white;
-            border-radius: 5px;
-            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+            padding: 40px;
+            border-radius: 15px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
         }
 
         .form-control {
-            width: 100%;
-            padding: 12px;
-            margin-bottom: 20px;
+            padding: 14px;
             border: 1px solid #ddd;
-            border-radius: 5px;
-            font-size: 16px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+            font-family: inherit;
         }
 
         .form-control:focus {
+            border-color: #f39c12;
             outline: none;
-            border-color: #1a5276;
+            box-shadow: 0 0 0 3px rgba(243, 156, 18, 0.1);
         }
 
         /* Footer */
         .footer {
-            background-color: #2c3e50;
+            background: #0a0a2a;
             color: white;
+            padding: 50px 0;
             text-align: center;
-            padding: 40px 0;
         }
 
         .social-links a {
-            color: white;
-            margin: 0 10px;
-            font-size: 20px;
-            text-decoration: none;
             display: inline-block;
-            transition: transform 0.3s;
+            width: 40px;
+            height: 40px;
+            background: rgba(255,255,255,0.1);
+            border-radius: 50%;
+            line-height: 40px;
+            margin: 0 10px;
+            color: white;
+            transition: all 0.3s;
         }
 
         .social-links a:hover {
-            color: #f39c12;
+            background: #f39c12;
             transform: translateY(-3px);
         }
 
         /* Responsive */
         @media (max-width: 768px) {
-            .hero h1 {
+            .hero-title {
                 font-size: 36px;
             }
-            
-            .hero h3 {
-                font-size: 20px;
+            .hero-subtitle {
+                font-size: 18px;
             }
-            
-            .about-content {
-                padding-left: 0;
-                margin-top: 30px;
+            .section-title {
+                font-size: 28px;
             }
-            
-            .profile-img {
-                width: 150px;
-                height: 150px;
-            }
-            
-            .contact-info {
+            .about-img {
+                height: 350px;
                 margin-bottom: 30px;
+            }
+            .quote-text {
+                font-size: 22px;
             }
         }
     </style>
 </head>
 <body>
     <!-- Navigation -->
-    <nav class="navbar navbar-expand-lg navbar-light fixed-top">
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
         <div class="container">
             <a class="navbar-brand" href="#">Lorna Moffat</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
@@ -425,92 +538,80 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
-                    <li class="nav-item">
-                        <a class="nav-link" href="#home">Home</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#services">Services</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#about">About</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#why-me">Why Me</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#contact">Contact</a>
-                    </li>
+                    <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#services">Services</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#why-me">Why Me</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#awards">Awards</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
                 </ul>
             </div>
         </div>
     </nav>
 
-    <!-- Hero Section with Your Photo -->
-    <section id="home" class="hero">
-        <div class="container">
-            <div class="profile-img">
-                <!-- Your photo inserted here -->
-                <img src="Lorna-Moffat-Pic.jpg" alt="Lorna Moffat">
+    <!-- Hero Section -->
+    <section id="home" class="hero-section">
+        <div class="container text-center">
+            <div class="profile-img-container">
+                <img src="Lorna-Moffat-Pic.JPG" alt="Lorna Moffat">
             </div>
-            <h1>Lorna Moffat</h1>
-            <h3>Project Management & Business Development Consultant</h3>
-            <p>I partner with businesses, organizations, and entrepreneurs to provide tailored solutions that drive growth, efficiency, and success.</p>
-            <a href="#contact" class="btn">Get In Touch</a>
+            <h1 class="hero-title">Lorna Moffat</h1>
+            <h3 class="hero-subtitle">Project Management & Business Development Consultant</h3>
+            <div class="hero-badges">
+                <span class="badge-custom"><i class="fas fa-certificate me-2"></i>PMP Certified</span>
+                <span class="badge-custom"><i class="fas fa-clock me-2"></i>15+ Years Experience</span>
+                <span class="badge-custom"><i class="fas fa-chart-line me-2"></i>Multi-Million Dollar Projects</span>
+                <span class="badge-custom"><i class="fas fa-users me-2"></i>Strategic Leadership</span>
+            </div>
+            <p class="lead" style="max-width: 800px; margin: 30px auto;">Strategic Programs and Portfolio Leader with over 15 years of experience leading multi-million-dollar initiatives across regulated, multi-stakeholder environments.</p>
+            <a href="#contact" class="btn-primary">Get In Touch</a>
         </div>
     </section>
 
     <!-- Services Section -->
-    <section id="services" class="services">
+    <section id="services" class="services-section">
         <div class="container">
-            <div class="section-title">
-                <h2>What I Do</h2>
-                <p>With hands-on experience in leading complex projects and business transformation, I bring clarity, momentum, and results.</p>
-            </div>
-            
-            <div class="row">
+            <h2 class="section-title text-center">Consulting Services</h2>
+            <p class="text-center mb-5" style="color: #666;">Comprehensive project management and business development solutions tailored to your organization's needs.</p>
+            <div class="row g-4">
                 <div class="col-md-6 col-lg-4">
                     <div class="service-card">
-                        <i class="fas fa-project-diagram"></i>
+                        <div class="service-icon"><i class="fas fa-project-diagram"></i></div>
                         <h4>Project Planning & Execution</h4>
                         <p>End-to-end project management from conception to completion, ensuring timely delivery and quality results.</p>
                     </div>
                 </div>
-                
                 <div class="col-md-6 col-lg-4">
                     <div class="service-card">
-                        <i class="fas fa-chart-line"></i>
+                        <div class="service-icon"><i class="fas fa-chart-line"></i></div>
                         <h4>Business Strategy & Development</h4>
                         <p>Strategic planning and business development to drive growth and competitive advantage.</p>
                     </div>
                 </div>
-                
                 <div class="col-md-6 col-lg-4">
                     <div class="service-card">
-                        <i class="fas fa-cogs"></i>
+                        <div class="service-icon"><i class="fas fa-cogs"></i></div>
                         <h4>Process Improvement & Optimization</h4>
                         <p>Streamlining operations and implementing efficient processes to maximize productivity.</p>
                     </div>
                 </div>
-                
                 <div class="col-md-6 col-lg-4">
                     <div class="service-card">
-                        <i class="fas fa-users"></i>
+                        <div class="service-icon"><i class="fas fa-users"></i></div>
                         <h4>Team Building & Leadership Coaching</h4>
                         <p>Developing high-performing teams and coaching leaders to achieve their full potential.</p>
                     </div>
                 </div>
-                
                 <div class="col-md-6 col-lg-4">
                     <div class="service-card">
-                        <i class="fas fa-exchange-alt"></i>
+                        <div class="service-icon"><i class="fas fa-exchange-alt"></i></div>
                         <h4>Change Management</h4>
                         <p>Guiding organizations through transformational changes with minimal disruption.</p>
                     </div>
                 </div>
-                
                 <div class="col-md-6 col-lg-4">
                     <div class="service-card">
-                        <i class="fas fa-shield-alt"></i>
+                        <div class="service-icon"><i class="fas fa-shield-alt"></i></div>
                         <h4>Risk Assessment & Mitigation</h4>
                         <p>Identifying potential risks and developing strategies to minimize their impact.</p>
                     </div>
@@ -519,32 +620,32 @@
         </div>
     </section>
 
-    <!-- About Section with Your Photo -->
-    <section id="about" class="about">
+    <!-- About Section -->
+    <section id="about" class="about-section">
         <div class="container">
             <div class="row align-items-center">
                 <div class="col-lg-6">
                     <div class="about-img">
-                        <!-- Your photo inserted here -->
                         <img src="About-section.jpg" alt="Lorna Moffat">
                     </div>
                 </div>
                 <div class="col-lg-6">
-                    <div class="about-content">
-                        <h2>About Me</h2>
-                        <p>I am a dedicated business consultant with over 10 years of experience in project management and business development. My passion lies in helping businesses achieve sustainable growth through strategic planning and effective execution.</p>
-                        <p>I believe that "Strategy without execution is just a dream." This philosophy drives my approach to consulting, where I focus on turning plans into measurable progress and tangible results for my clients.</p>
-                        <p>My hands-on approach ensures that I understand the unique challenges each business faces, allowing me to provide customized solutions that address specific needs and drive meaningful change.</p>
-                        
-                        <div class="row mt-4">
-                            <div class="col-6">
-                                <h3 style="color: #1a5276;">10+</h3>
-                                <p style="font-size: 16px;">Years Experience</p>
-                            </div>
-                            <div class="col-6">
-                                <h3 style="color: #1a5276;">50+</h3>
-                                <p style="font-size: 16px;">Projects Completed</p>
-                            </div>
+                    <h2 class="section-title">About Me</h2>
+                    <p class="lead" style="color: #1a5276; font-weight: 500;">Strategic Programs and Portfolio Leader with over 15 years of experience.</p>
+                    <p>I specialize in leading multi-million-dollar initiatives across regulated, multi-stakeholder environments. My expertise spans program design, cross-functional coordination, strategic planning, monitoring and evaluation oversight, proposal development, and governance compliance.</p>
+                    <p>I am passionate about guiding teams in translating strategy into measurable operational plans, supervising implementation against Key Performance Indicators, ensuring financial and narrative reporting integrity, and maintaining alignment with regulatory and institutional frameworks.</p>
+                    <div class="about-stats">
+                        <div class="stat-box">
+                            <h3>15+</h3>
+                            <p>Years Experience</p>
+                        </div>
+                        <div class="stat-box">
+                            <h3>$12.9M+</h3>
+                            <p>Portfolio Managed</p>
+                        </div>
+                        <div class="stat-box">
+                            <h3>50+</h3>
+                            <p>Projects Completed</p>
                         </div>
                     </div>
                 </div>
@@ -553,128 +654,155 @@
     </section>
 
     <!-- Why Work With Me Section -->
-    <section id="why-me" class="why-me">
+    <section id="why-me" class="why-me-section">
         <div class="container">
-            <div class="section-title">
-                <h2>Why Work With Me</h2>
+            <h2 class="section-title text-center">Why Work With Me</h2>
+            <div class="row g-4 mt-4">
+                <div class="col-md-6 col-lg-4">
+                    <div class="value-card">
+                        <div class="value-icon"><i class="fas fa-trophy"></i></div>
+                        <h4>Proven Track Record</h4>
+                        <p>Project Leader of the Year 2024 & multiple industry awards for excellence.</p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="value-card">
+                        <div class="value-icon"><i class="fas fa-chart-pie"></i></div>
+                        <h4>Multi-Million Dollar Portfolio</h4>
+                        <p>Successfully managed USD 12.9M+ portfolio of strategic initiatives.</p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="value-card">
+                        <div class="value-icon"><i class="fas fa-balance-scale"></i></div>
+                        <h4>Regulatory Expertise</h4>
+                        <p>Deep experience in regulated environments and governance compliance.</p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="value-card">
+                        <div class="value-icon"><i class="fas fa-handshake"></i></div>
+                        <h4>Stakeholder Engagement</h4>
+                        <p>Adept at engaging across public, private, and institutional sectors.</p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="value-card">
+                        <div class="value-icon"><i class="fas fa-certificate"></i></div>
+                        <h4>Professional Certifications</h4>
+                        <p>PMP, PMI-ACP, Certified Project Director, and more.</p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="value-card">
+                        <div class="value-icon"><i class="fas fa-star"></i></div>
+                        <h4>Strategic Leadership</h4>
+                        <p>Recognized as Influential Woman in Project Management 2022 & 2023.</p>
+                    </div>
+                </div>
             </div>
-            
-            <div class="row">
-                <div class="col-md-6 col-lg-4">
-                    <div class="value-item">
-                        <i class="fas fa-award"></i>
-                        <h4>Proven Experience</h4>
-                        <p>Over 10 years of demonstrated success in project management and business consulting.</p>
-                    </div>
+        </div>
+    </section>
+
+    <!-- Awards Section -->
+    <section id="awards" class="awards-section">
+        <div class="container">
+            <h2 class="section-title text-center">Achievements & Recognition</h2>
+            <p class="text-center mb-5" style="color: #666;">Industry recognition that speaks to my commitment to excellence</p>
+            <div class="awards-grid">
+                <div class="award-card">
+                    <div class="award-icon"><i class="fas fa-trophy"></i></div>
+                    <h4>Leader of the Year</h4>
+                    <p>Telecommunications (2024) - Chartered Institute of Project Managers</p>
                 </div>
-                
-                <div class="col-md-6 col-lg-4">
-                    <div class="value-item">
-                        <i class="fas fa-bullseye"></i>
-                        <h4>Results-Driven</h4>
-                        <p>Hands-on approach focused on delivering measurable results and tangible outcomes.</p>
-                    </div>
+                <div class="award-card">
+                    <div class="award-icon"><i class="fas fa-crown"></i></div>
+                    <h4>Woman of Impact</h4>
+                    <p>CEO's Network (2023)</p>
                 </div>
-                
-                <div class="col-md-6 col-lg-4">
-                    <div class="value-item">
-                        <i class="fas fa-seedling"></i>
-                        <h4>Sustainable Growth</h4>
-                        <p>Passionate about implementing strategies that ensure long-term growth.</p>
-                    </div>
+                <div class="award-card">
+                    <div class="award-icon"><i class="fas fa-medal"></i></div>
+                    <h4>Silver Award</h4>
+                    <p>Project Management (2023) - CEO's Network</p>
                 </div>
-                
-                <div class="col-md-6 col-lg-4">
-                    <div class="value-item">
-                        <i class="fas fa-pencil-ruler"></i>
-                        <h4>Customized Solutions</h4>
-                        <p>Tailored approaches for each client's unique challenges and goals.</p>
-                    </div>
+                <div class="award-card">
+                    <div class="award-icon"><i class="fas fa-star"></i></div>
+                    <h4>Woman of Influence</h4>
+                    <p>Marketers Association of Zimbabwe (2022)</p>
                 </div>
-                
-                <div class="col-md-6 col-lg-4">
-                    <div class="value-item">
-                        <i class="fas fa-comments"></i>
-                        <h4>Strong Communication</h4>
-                        <p>Clear understanding and seamless collaboration throughout the process.</p>
-                    </div>
+                <div class="award-card">
+                    <div class="award-icon"><i class="fas fa-award"></i></div>
+                    <h4>Influential Woman in PM</h4>
+                    <p>PMI Zimbabwe & CIPMZ (2022 & 2023)</p>
                 </div>
-                
-                <div class="col-md-6 col-lg-4">
-                    <div class="value-item">
-                        <i class="fas fa-lightbulb"></i>
-                        <h4>Leadership Expertise</h4>
-                        <p>Proven leadership to guide teams through complex challenges.</p>
-                    </div>
+                <div class="award-card">
+                    <div class="award-icon"><i class="fas fa-gem"></i></div>
+                    <h4>Top 50 Visionary Women</h4>
+                    <p>Women Corporate Directors Network (2022)</p>
+                </div>
+                <div class="award-card">
+                    <div class="award-icon"><i class="fas fa-certificate"></i></div>
+                    <h4>Order of Merit</h4>
+                    <p>Institute of Project Management (2022)</p>
+                </div>
+                <div class="award-card">
+                    <div class="award-icon"><i class="fas fa-chart-line"></i></div>
+                    <h4>100% Success Rate</h4>
+                    <p>Across USD 12.9M+ strategic portfolio</p>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Quote Section -->
-    <section class="quote">
+    <section class="quote-section">
         <div class="container">
-            <p>"Strategy without execution is just a dream. I help you turn your plans into measurable progress."</p>
-            <div class="quote-author">— Lorna Moffat</div>
-        </div>
-    </section>
-
-    <!-- Testimonials -->
-    <section class="testimonials">
-        <div class="container">
-            <div class="section-title">
-                <h2>Client Testimonials</h2>
-            </div>
-            
-            <div class="row">
-                <div class="col-lg-8 mx-auto">
-                    <div class="testimonial-card">
-                        <p>"Lorna's expertise in project management was instrumental in helping our organization navigate a complex restructuring process. Her hands-on approach and strategic insights delivered results that exceeded our expectations."</p>
-                        <div class="client">- CEO, Manufacturing Company</div>
-                    </div>
-                    
-                    <div class="testimonial-card">
-                        <p>"Working with Lorna transformed our business operations. Her process optimization strategies helped us reduce costs by 22% while improving overall efficiency. She's more than a consultant - she's a strategic partner."</p>
-                        <div class="client">- Director, Tech Startup</div>
-                    </div>
-                </div>
-            </div>
+            <p class="quote-text">"Strategy without execution is just a dream. I help you turn your plans into measurable progress and sustainable impact."</p>
+            <p class="quote-author">— Lorna Moffat</p>
         </div>
     </section>
 
     <!-- Contact Section -->
-    <section id="contact" class="contact">
+    <section id="contact" class="contact-section">
         <div class="container">
-            <div class="section-title">
-                <h2>Contact Me</h2>
-                <p>Let's work together to move your business forward!</p>
-            </div>
-            
+            <h2 class="section-title text-center">Let's Work Together</h2>
+            <p class="text-center mb-5" style="color: rgba(255,255,255,0.8);">Ready to move your business forward? Let's discuss how I can help you achieve your strategic goals.</p>
             <div class="row">
                 <div class="col-lg-4">
                     <div class="contact-info">
-                        <p><i class="fas fa-envelope"></i> lornamoffat3@gmail.com</p>
-                        <p><i class="fas fa-phone"></i> +263 712 042 225</p>
+                        <h4 class="mb-4">Contact Information</h4>
                         <p><i class="fas fa-map-marker-alt"></i> Harare, Zimbabwe</p>
-                        <hr>
-                        <p><i class="fas fa-quote-left"></i> Strategy without execution is just a dream. I help you turn your plans into measurable progress.</p>
+                        <p><i class="fas fa-phone"></i> +263 78 222 2868<br>+263 71 204 2225</p>
+                        <p><i class="fas fa-envelope"></i> lornamoffat3@gmail.com</p>
+                        <p><i class="fab fa-linkedin"></i> linkedin.com/in/lorna-moffat</p>
+                        <hr style="background: rgba(255,255,255,0.2);">
+                        <p><i class="fas fa-quote-left"></i> Over 15 years of proven experience in project management and business development.</p>
                     </div>
                 </div>
-                
                 <div class="col-lg-8">
                     <div class="contact-form">
-                        <form id="contactForm">
+                        <h4 class="mb-4">Send a Message</h4>
+                        <form id="contactForm" action="https://formsubmit.co/lornamoffat3@gmail.com" method="POST">
                             <div class="row">
                                 <div class="col-md-6">
-                                  <input type="text" name="name" class="form-control" placeholder="Your Name" required>
+                                    <input type="text" name="name" class="form-control"
+                                        placeholder="Your Name" required>
                                 </div>
                                 <div class="col-md-6">
-                                  <input type="email" name="email" class="form-control" placeholder="Your Email" required>
+                                    <input type="email" name="email" class="form-control"
+                                        placeholder="Your Email" required>
                                 </div>
                             </div>
-                           <input type="text" name="subject" class="form-control" placeholder="Subject" required>
-                           <textarea name="message" class="form-control" rows="5" placeholder="Your Message" required></textarea>
-                            <button type="submit" class="btn">Send Message</button>
+                        
+                            <input type="text" name="subject" class="form-control"
+                                placeholder="Subject" required>
+                        
+                            <textarea name="message" class="form-control" rows="5"
+                                placeholder="Your Message" required></textarea>
+                        
+                            <button type="submit" class="btn-primary">
+                                Send Message
+                            </button>
                         </form>
                     </div>
                 </div>
@@ -689,15 +817,13 @@
                 <a href="#"><i class="fab fa-linkedin-in"></i></a>
                 <a href="#"><i class="fab fa-twitter"></i></a>
                 <a href="#"><i class="fab fa-facebook-f"></i></a>
-                <a href="#"><i class="fab fa-instagram"></i></a>
             </div>
-            <p>&copy; 2024 Lorna Moffat. All Rights Reserved.</p>
+            <p class="mb-0">© 2024 Lorna Moffat. All Rights Reserved.</p>
+            <p class="mt-2 small">Project Management & Business Development Consultant</p>
         </div>
     </footer>
 
-    <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-    
     <script>
         // Smooth scrolling
         document.querySelectorAll('a.nav-link').forEach(anchor => {
@@ -717,30 +843,11 @@
         });
 
         // Contact form
-       (function(){
-    emailjs.init("YOUR_PUBLIC_KEY");
-})();
-
-document.getElementById('contactForm').addEventListener('submit', function(e) {
-    e.preventDefault();
-
-    emailjs.sendForm('YOUR_SERVICE_ID', 'YOUR_TEMPLATE_ID', this)
-    .then(function() {
-        alert('Message sent successfully!');
-    }, function(error) {
-        alert('Failed to send message. Please try again.');
-        console.error(error);
-    });
-
-    this.reset();
+        document.getElementById('contactForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('Thank you for your message! Lorna will get back as soon as possible.');
+            this.reset();
+        });
     </script>
-    <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
-
-    <script>
-(function(){
-    emailjs.init("YOUR_PUBLIC_KEY");
-})();
-</script>
-    
 </body>
 </html>
